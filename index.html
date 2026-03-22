@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="restaurant">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant App - Assignment 5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ui-sref="public.signup">Sign Up</a></li>
+          <li><a ui-sref="public.myinfo">My Info</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+        <ui-view>Loading...</ui-view>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script>
+
+    <script src="src/common/common.module.js"></script>
+    <script src="src/public/public.module.js"></script>
+    <script src="src/restaurant.module.js"></script>
+
+    <script src="src/public/public.routes.js"></script>
+    <script src="src/common/user.service.js"></script>
+    <script src="src/public/signup/signup.controller.js"></script>
+    <script src="src/public/myinfo/my-info.controller.js"></script>
+</body>
+</html>
