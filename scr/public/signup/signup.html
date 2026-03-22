@@ -1,0 +1,13 @@
+<div class="row">
+  <form name="regForm" novalidate class="col-sm-6 col-sm-offset-3">
+    <h3>Sign Up</h3>
+    <input type="text" placeholder="First Name" ng-model="signupCtrl.user.firstname" required class="form-control"><br>
+    <input type="email" placeholder="Email" ng-model="signupCtrl.user.email" required class="form-control"><br>
+    <input type="text" placeholder="Favorite Dish (e.g. L1)" ng-model="signupCtrl.user.favoriteDish" required class="form-control"><br>
+    
+    <button ng-disabled="regForm.$invalid" ng-click="signupCtrl.submit()" class="btn btn-success">Submit</button>
+    
+    <p ng-if="signupCtrl.success" class="text-success">Your information has been saved.</p>
+    <p ng-if="signupCtrl.error" class="text-danger">No such menu number exists.</p>
+  </form>
+</div>
